@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/* Layout */
+#header{
+    width: 100%;
+    border-bottom: 1px solid #c6c6c6;
+}
+#banner{
+    position: relative;
+}
+
+/* container */
+.container{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* row */
+.row{
+    padding: 0 24px;
+}
+
+/* header 영역 */
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header .logo .main-logo{
+    display: inline-block;
+    padding: 10px 9px 3px 0;
+}
+.header .logo .main-logo img{
+    width: 155px;
+}
+.header .logo .sub-logo{
+    display: block;
+    position: absolute;
+    left: 191px;
+    top: 17px;
+}
+.header .logo .sub-logo img{
+    width: 126px;
+}
+
+
+.header .gnb ul{
+    display: flex;
+    border-left: 1px solid #c6c6c6;
+}
+.header .gnb ul li{
+    width: 103px;
+    text-align: center;
+    border-right: 1px solid #c6c6c6;
+}
+.header .gnb ul li a{
+    display: inline-block;
+    padding: 14px 16px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* banner 영역 */
+.banner-menu{
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    height: 100px;
+}
+.banner-menu a{
+    color: white;
+    font-size: 16px;
+    transition: color .3s;
+}
+.banner-menu a:hover{
+    color: #c1c1c1;
+}
+.banner-menu .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-menu .bm-left ul{
+    display: flex;
+}
+.banner-menu .bm-left ul .total{
+    border: 1px solid white;
+    margin-right: 20px;
+}
+.banner-menu .bm-left ul .total a{
+    display: inline-block;
+    font-size: 14px;
+    padding: 3px 10px;
+    transition: all .3s;
+}
+.banner-menu .bm-left ul .total a:hover{
+    background-color: white;
+    border-color: #000;
+    color: #000;
+}
+.banner-menu .bm-left ul li{
+    margin-right: 30px;
+}
+
+.banner-menu .bm-right{
+    display: flex;
+}
+.banner-menu .bm-right ul{
+    display: flex;
+    padding-top: 7px;
+}
+.banner-menu .bm-right ul:first-child{
+    padding-top: 10px;
+}
+.banner-menu .bm-right ul li{
+    margin-right: 20px;
+}
+.banner-menu .bm-right ul .line{
+    margin-right: 30px;
+}
+.banner-menu .line{
+    position: relative;
+}
+.banner-menu .line::after{
+    content: ' ';
+    width: 1px;
+    height: 14px;
+    background-color: white;
+    position: absolute;
+    right: -18px;
+    top: 6px;
+}
+.banner-menu .bm-right ul .white{
+    margin-right: 10px;
+}
+.banner-menu .bm-right ul .white a{
+    width: 80px;
+    background-color: white;
+    color:#3a036a;
+    padding: 7px 30px 9px 30px;
+    border: 1px solid #fff;
+}
+.banner-menu .bm-right ul .purple{
+    margin-right: 0;
+}
+.banner-menu .bm-right ul .purple a{
+    width: 80px;
+    background-color:#3a0e6a;
+    color:#fff;
+    padding: 7px 30px 9px 30px;
+    border: 1px solid #6340c4;
+}
