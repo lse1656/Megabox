@@ -251,7 +251,23 @@
     padding-top: 50px;
 }
 
+/* movie */
+.movie{}
+.movie .movie-tit{}
+.movie .movie-tit ul{
+    display: flex;
+    justify-content: center;
+}
+.movie .movie-tit ul li{}
 
+.movie .movie-chart{}
+.movie .movie-chart .chart_cont1{
+    display: flex;
+}
+.movie .movie-chart > div .poster{}
+.movie .movie-chart > div .poster .rank{}
+.movie .movie-chart > div .poster .mx{}
+.movie .movie-chart > div .infor{}
 
 
 
