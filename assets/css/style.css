@@ -105,6 +105,7 @@
 
 /* banner 영역 */
 .banner-menu{
+    z-index: 10;
     position: absolute;
     left: 0;
     top: 20px;
@@ -121,7 +122,6 @@
 .banner-menu .row{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .banner-menu .bm-left{
@@ -133,6 +133,9 @@
 .banner-menu .bm-left ul .total{
     border: 1px solid white;
     margin-right: 20px;
+}
+.banner-menu .bm-left ul .total i{
+    padding-right: 2px;
 }
 .banner-menu .bm-left ul .total a{
     display: inline-block;
@@ -198,6 +201,60 @@
     border: 1px solid #6340c4;
 }
 
+/* slide */
+.slider{
+    width: 100%;
+    height: 500px;
+}
+.slider .ss1{
+    background: url(../img/swiper01.jpg) no-repeat center center;
+    background-size: cover;
+}
+.slider .ss2{
+    background: url(../img/main_slider02_2000.jpg) no-repeat center center;
+    background-size: cover;
+}
+.slider .ss3{
+    background: url(../img/main_slider03_2000.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.slider .swiper-slide .swiper-text{
+    display: inline-flex;
+    flex-direction: column;
+}
+.slider .swiper-slide .swiper-text h2{
+    display: inline-block;
+    position: relative;
+    font-size: 60px;
+    color: white;
+    margin-top: 145px;
+    line-height: 65px;
+}
+.slider .swiper-slide .swiper-text h2::after{
+    content: ' ';
+    width: 120%;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+.slider .swiper-slide .swiper-text  h2 em{
+    font-size: 59px;
+    font-weight: 100;
+    display: block;
+}
+.slider .swiper-slide .swiper-text p{
+    font-size: 27px;
+    color: white;
+    padding-top: 50px;
+}
+
+
+
+
+
 /* media query */
 @media (max-width: 1290px){
     .container{
@@ -215,6 +272,11 @@
     }
     .header .logo .sub-logo{
         top: 19px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: none;
     }
 }
 
@@ -235,11 +297,37 @@
     .header .logo .sub-logo{
         left: 24px;
     }
-   
+    .banner-menu .bm-left{
+        display: none;
+    }
+    .banner-menu .bm-right{
+        margin-left: auto;
+    }
+    .banner-menu .bm-right ul:first-child{
+        display: none;
+    }
 }
 
 @media (max-width: 960px){
-
+    .slider{
+        height: 400px;
+    }
+    .slider .swiper-slide .swiper-text h2{
+        margin-top: 129px;
+        font-size: 37px;
+        line-height: 45px;
+    }
+    .slider .swiper-slide .swiper-text h2::after{
+        bottom: -20px;
+    }
+    .slider .swiper-slide .swiper-text h2 em{
+        font-size: 34px;
+    }
+    .slider .swiper-slide .swiper-text p{
+        font-size: 16px;
+        padding-top: 35px;
+    }
+    
 }
 
 @media (max-width: 768px){
@@ -255,6 +343,45 @@
     .header .logo .sub-logo{
         display: none;
     }
+}
+
+@media (max-width: 600px){
+    .slider{
+        height: 300px;
+    }
+    .slider .swiper-slide .swiper-text h2{
+        margin-top: 90px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .slider .swiper-slide .swiper-text h2::after{
+        bottom: -12px;
+    }
+    .slider .swiper-slide .swiper-text h2 em{
+        font-size: 22px;
+    }
+    .slider .swiper-slide .swiper-text p{
+        font-size: 14px;
+        padding-top: 25px;
+    }
+    .banner-menu{
+        top: 16px;
+    }
+    .banner-menu .bm-right ul .white a{
+        font-size: 14px;
+        padding: 3px 5px 5px 5px;
+        color: white;
+        background: rgba(0,0,0,0.6);
+        border-color: white;
+    }
+    .banner-menu .bm-right ul .purple a{
+        font-size: 14px;
+        padding: 3px 5px 5px 5px;
+        color: white;
+        background: rgba(0,0,0,0.6);
+        border-color: white;
+    }
+    .swiper-pagination-bullet {width: 13px !important; height: 13px !important;}
 }
 
 @media (max-width: 480px){
